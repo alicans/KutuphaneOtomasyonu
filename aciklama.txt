@@ -1,0 +1,22 @@
+Baþlangýç
+
+Öncelikle yeni bir class library projesi oluþturalým ve adýný CSProjeDemo1 diyelim. Bu uygulama aþaðýda gösterildiði gibi altý sýnýftan oluþmaktadýr:
+
+- Kitap (Abstract Class)
+- Durum (Enum)
+- KitapBilim: Kitap (Sub Class)
+- KitapRoman: Kitap (Sub Class)
+- KitapTarih: Kitap (Sub Class)
+- IUye : (Interface)
+- Uye: IUye (Inheritance)
+- Kutuphane (Class)
+
+Temel Bileþenler
+1) Kitap: Kitaplarýn temel özelliklerini (ISBN, baþlýk, yazar, yayýn yýlý vb.) içerir ve diðer kitap türleri için temel (base class) görevi görür.
+2) Kitap Bilim, KitapRoman, KitapTarih Kütüphanede bulunan kitap türlerimize göre BaseKitap’dan kalýtým alarak kütüphanedeki kitap türü kadar alt sýnýf (sub class) oluþturulur.(KitapBilim, KitapRoman, v.b.) Bu sýnýf mevcut durumunu (ödünç alýnabilir, ödünçte, mevcut deðil) tutan bir sýnýf olmalýdýr.
+3) Durum: Kitap sýnýfý içerisinde kullanmak üzere kitaplarýn ödünç durumunu belirtmek için (OduncAlabilir, OduncVerildi, MevcutDegil, v.b.) bir enum tanýmlayýn.
+4) IUye: Uye class’ýnýn özelliklerini (ad, soyad, üye numarasý vb.), ödünç aldýklarý kitaplarýn listesini ve ödünç alma/verme metotlarýný belirten bir interface tanýmlanýr.
+5) Üye: IUye interface’inden implent edilerek kIUye interface’inden implent edilerek kütüphaneye üye olan kiþilerin ütüphaneye üye olan kiþilerin özelliklerini ve özelliklerini ve metotlarýnýn uygulandýðý bir sýnýf.
+6) Kütüphane:  Kitaplarý ve üyeleri yöneten ana sýnýf. Kitaplarýn ödünç verilmesi, iade edilmesi ve mevcut durumunun güncellenmesi gibi iþlemleri yapacak metotlarý içermeli.
+
+Bu program class lib olarak hazýrlayýnýz.
