@@ -53,6 +53,20 @@ namespace CSProjeDemo1.Services
 
             uye.KitapOduncVer(kitap);
         }
+        public void KitapDurumGuncelle(Kitap kitap, Durum yeniDurum)
+        {
+            if (kitap == null)
+            {
+                throw new ArgumentNullException("Kitap boş olamaz.");
+            }
+
+            if (!Kitaplar.Contains(kitap))
+            {
+                throw new InvalidOperationException("Kitap kütüphanede mevcut değil.");
+            }
+
+            kitap.Durum = yeniDurum;
+        }
 
         public void KitapEkle(Kitap kitap)
         {

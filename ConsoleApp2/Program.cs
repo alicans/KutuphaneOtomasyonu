@@ -71,6 +71,21 @@ namespace ConsoleApp2
                     Console.WriteLine($"Hata: {ex.Message}");
                 }
 
+                // Kitabın durumunu güncelleme işlemi
+
+                try
+                {
+                    kutuphane.KitapDurumGuncelle(kutuphane.Kitaplar[99], Durum.MevcutDegil);
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine($"Hata: Kitap kütüphanede mevcut değil.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Hata: {ex.Message}");
+                }
+
                 // Listeleme İşlemleri
                 Console.WriteLine("Kitaplar:");
                 foreach (var kitap in kutuphane.Kitaplar)
