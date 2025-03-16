@@ -75,7 +75,7 @@ namespace ConsoleApp2
 
                 try
                 {
-                    kutuphane.KitapDurumGuncelle(kutuphane.Kitaplar[99], Durum.MevcutDegil);
+                    kutuphane.KitapDurumGuncelle(kutuphane.Kitaplar[6], Durum.MevcutDegil);
                 }
                 catch (ArgumentOutOfRangeException)
                 {
